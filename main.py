@@ -8,6 +8,8 @@ for i in range(360):
         file.write(d)
     ## Add bot.txt to staging area
     os.system('git add bot.txt')
+    mydate = str(i) + ' day ago'
+    os.system('git commit --date="' + mydate + '" -m "first commit"')
     ## Commit it
     os.system('git commit --date="' + d + '" -m "first commit"')
 
